@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/eff5818e97.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Minesweeper</title>
+</head>
+<body>
+    <div class="main-header">
+        <div class="wrapper">
+
+
+            <div class="nav-logo">
+                <a>
+                    <img src="https://i.imgur.com/oU4qOth.png" title="source: imgur.com" /></a>
+                </a>
+            </div>
+
+            <div class="nav-bar">
+                <nav>
+                    <span class="lnw-slog">Minesweeper & More</span>
+                    <ul class="navbar-menu">
+                        
+                        <li>
+                            <a href="https://www.nytimes.com/games/connections" target="_blank">
+                                <i class="fa-solid fa-list"></i>Connections
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">
+                                <i class="fa-solid fa-bars"></i>Wordle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nytimes.com/crosswords/game/mini" target="_blank">
+                                <i class="fa-solid fa-pen-to-square"></i>Mini
+                            </a>
+                        </li>
+                        <!-- <li>         WANTED TO DO THIS BUT IT IS WAY TOO FUCKING COMPLICATED. I ALREADY EXAUSTED ALL MY BRAIN POWER JUST GETTING MS TO WORK
+                            <div id="leaderboards">
+                                <i class="fa-regular fa-gem"></i>Minesweeper Leaderboard
+                            </div>
+                        </li> -->
+                        <li>
+                            <div id="mode-toggle"><i class="fa-solid fa-moon"></i></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="main">
+
+        <div class="container">
+            <div class="minesweeper">
+                <div class="header">
+                    <div class="left-align"><div id="stopwatch">00:00:00</div><i class="fa-regular fa-clock"></i></div>
+                    <div class="right-align">Mines Left: <span data-mine-count></span></div>
+                </div>
+                <div class="board"></div>
+                <div class="footer">
+                    <button id="reset">Reset</button>
+                    <button id="howto">How To Play</button>
+                    <div class="dropdown">
+                        <button id="difficulty">Difficulty<i class="fa-solid fa-arrow-down"></i></button>
+                        <div class="dropdown-content">
+                            <button id="easy">Easy</button>
+                            <button id="medium">Medium</button>
+                            <button id="hard">Hard</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gameOver">
+                <div class="overlay">
+                    <div class="modal">
+                        <div class="game-over"></div>
+                        <div class="time"></div>
+                        <div class="clicks"></div>
+                        <div class="footer">
+                            <button id="reset-container">Reset</button>
+                            <!-- <button id="leaderboard">Submit Score to Leaderboard</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container noshow">
+            <p>Minesweeper is about clicking grids and trying to avoid mines. <br>
+               The first click will always reveal a blank area with numbers on the edges.<br> 
+               These numbers correspond to how many mines are in adjacent tiles. <br>
+               If you right click a mine you put a flag there, marking that grid as a mine. <br>
+               <br>
+               You win if all safe squares have been clicked!</p><br>
+            <button class="patterns-btn" id="patterns">Click here for some patterns</button>
+        </div>
+
+        <div class="container patterns1">
+            <div class="image">
+                <img src="https://i.imgur.com/qFHnmj3.png" title="source: imgur.com" /></a>
+                <p>This is a basic 1 pattern.<br> 
+                  There is only one spot for there <br>
+                  to be a mine.</p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/A8IpTT7.png" title="source: imgur.com" /></a>
+                <p>This is a basic 2 pattern.<br> 
+                  There are only two spots for <br>
+                  there to be a mine for the <br>
+                  tiles surrounding the two.</p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/CBBLVLi.png" title="source: imgur.com" /></a>
+                <p>This is a basic 3 pattern.<br>You get the idea by now.</p>
+            </div>
+        </div>
+
+        <div class="container patterns2">
+            <div class="image">
+                <img src="https://i.imgur.com/yXZ7fxs.png" title="source: imgur.com" /></a>
+                <p>This is one of the more famous patterns. A 1-2-1. <br> This is its solution. </p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/SxuhLBq.png" title="source: imgur.com" /></a>
+                <p>This is another famous pattern. A 1-2-2-1. <br> This is its solution.</p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/9lxKeFl.png" title="source: imgur.com" /></a>
+                <p>This is one of the more advanced patterns. The pink area indicates that the slot is guarenteed to not be a mine. 
+                    There are more advanced patterns out there, however, they are extremely situational, so I won't include them. If you need more click the link below. <br><br></p>
+                <a href="https://minesweepergame.com/strategy/patterns.php" target="_blank" class="textdeco">Minesweeper Patterns</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

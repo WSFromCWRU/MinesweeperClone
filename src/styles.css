@@ -1,0 +1,473 @@
+/* i hope you like this project.  */
+
+* {
+    box-sizing: border-box;  
+    font-family: roboto;
+    margin:0px;
+    padding:0px;
+}
+
+html {
+    line-height: 1.5;
+    overflow-x: hidden;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: var(--bg-color-main);
+    color: var(--text-color);
+}
+
+/* navbar */
+.main-header {
+    height:90px;
+    border-bottom: 1px solid var(--bg-color-3);
+    position:relative;
+    background-color: #685dd8;
+}
+
+.main-header .wrapper {
+    width: 980px;
+    padding:0px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+
+.nav-logo {
+    margin:5px;
+    position: relative;
+    top:5px;
+    background-color: transparent;
+}
+
+.main-header .wrapper .nav-logo img {
+    height:auto;
+    width:70px;
+}
+
+.main-header .wrapper .nav-bar {
+    position:relative !important;
+    top:0;
+    width:100%;
+    transform:none;
+    padding:0px;
+    border:none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: inherit;
+    visibility: visible;
+    z-index: 0;
+}
+
+.main-header .wrapper .nav-bar .navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.main-header .wrapper .nav-bar .lnw-slog {
+    padding: .5rem;
+    display: block;
+    color: var(--text-color);
+}
+
+
+.main-header .wrapper .nav-bar .navbar-menu li a, .main-header .wrapper .nav-bar .navbar-menu li div{
+    padding: .2rem .2rem .2rem .5rem;
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
+    padding: 0;
+    display: inline-block;
+    height: 40px;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 20px;
+    margin:9px;
+}
+
+.main-header .wrapper .nav-bar .navbar-menu li a i, .main-header .wrapper .nav-bar .navbar-menu li div i{
+    margin:5px;
+}
+
+.main-header .wrapper .navigation-bar .navbar-menu li:not(:last-child) {
+    margin-right: 19px;
+  }
+
+a, button, label {
+    cursor: pointer;
+    outline: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.fa-moon {
+    font-size: 33px;
+    margin:5px;
+  cursor:pointer;
+}
+
+.title {
+    margin:10px;
+    font-size: 2.5rem;
+}
+
+/* main */
+
+.main {
+    background-color: var(--bg-color-main);
+}
+
+.container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin: 20px auto;
+    padding-right: 13px;
+    padding-left: 13px;
+    width: 970px;
+    border: 2px solid var(--bg-color-4);
+    border-radius: 2px;
+    justify-content: center;
+}
+
+
+.difficulty-panel {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.difficulty-panel ul.difficulty-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.difficulty-panel ul.difficulty-list li {
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid var(--bg-color-secondary);
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-secondary);
+    border-radius: 5px;
+    line-height: 1.5;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+
+.difficulty-panel ul.difficulty-list li button {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #1c7cbc;
+    padding:7px;
+    background-color: transparent;
+}
+
+.minesweeper {
+    padding:30px;
+}
+
+.minesweeper .header{
+    background-color: var(--bg-color-3);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minesweeper .footer {
+    background-color: var(--bg-color-3);
+    display: flex;
+}
+
+
+.minesweeper .header .right-align {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 1.25rem;
+}
+.minesweeper .header .left-align {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#difficulty {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width:120px;
+    font-size: 1.1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    background-color: var(--bg-color-2);
+    color: var(--text-color-2);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width:100px;
+    border: 1px solid var(--border-color-2);
+}
+
+.fa-arrow-down {
+    margin:auto 4px;
+}
+
+#stopwatch {
+    font-size: 1.5rem;
+    justify-content: center;
+    margin: auto 5px;
+}
+
+.fa-clock {
+    font-size: 1.25rem;
+}
+
+#reset {
+    background-color: #fc2626;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width:90px;
+}
+
+#howto {
+    border:none;
+    padding:10px;
+    background-color: var(--bg-color-secondary);
+    color:#ffffff;
+}
+
+
+
+.board {
+    display: inline-grid;
+    padding:5px;
+    grid-template-columns: repeat(var(--size), 30px);
+    grid-template-rows: repeat(var(--size), 30px);
+    color:#ffffff;
+    background-color: var(--text-color);
+    border: 1px solid var(--text-color);
+    gap:1px;
+}
+
+.board > * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.board > [data-status="hidden"]{
+    background-color: var(--text-color-2);
+}
+.board > [data-status="mine"]{
+    background-color: #ff0000;
+    background-image: url('https://i.imgur.com/4hD32hA.png');
+    background-size: cover; 
+    background-position: center;
+}
+.board > [data-status="number"]{
+    background-color: none;
+}
+.board > [data-status="marked"]{
+    background-image: url('https://i.imgur.com/fp3moJi.png');
+    background-size: cover; 
+    background-position: center;
+}
+
+
+
+#gameOver {
+    display:none;
+}
+
+.modal {
+    width: 20%;
+    position: fixed;
+    border-radius: 2px;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 480px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game-over {
+    font-size: 4rem;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.noshow {
+    display:none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.patterns1, .patterns2 {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.patterns1 .image, .patterns2 .image{
+    margin:20px;
+}
+
+
+
+.patterns1 .image img, .patterns2 .image img {
+    width:150px;
+    height:auto;
+}
+
+.patterns-btn {
+    border:none;
+    padding:10px;
+    background-color: var(--bg-color-secondary);
+    color:#ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#reset-container {
+    background-color: #fc2626;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width:90px;
+}
+
+.textdeco{
+  text-decoration:none;
+  color:blue;
+}
+
+
+/* i stole this color palette from a website. */
+:root[theme='dark'] {
+    --bg-nav-header: var(--bg-color);
+    --bg-color-secondary: #003eaa;
+    --bg-color-main: #121212;
+    --bg-color: #121212;
+    --bg-color-2: #1b1b1b;
+    --bg-color-3: #202020;
+    --bg-color-4: #252525;
+    --border-color: var(--bg-color-2);
+    --border-color-2: var(--bg-color-3);
+    --text-color: #acacac;
+    --text-color-2: #717171;
+}
+
+:root[theme='light'] {
+    --bg-nav-header: var(--bg-color-main);
+    --bg-color-secondary: #003eaa;
+    --bg-color-main: #fff;
+    --bg-color: #f5f5f5;
+    --bg-color-2: #fff;
+    --bg-color-3: #f7f7f7;
+    --bg-color-4: #ededed;
+    --bg-color-5: #e5e5e5;
+    --border-color: #f7f7f7;
+    --border-color-2: #f2f2f2;
+    --border-color-3: #ededed;
+    --border-color-4: #e8e8e8;
+    --border-color-5: #a1a1a1;
+    --border-color-6: #e1e1e1;
+    --text-color: #2a2e2e;
+    --text-color-2: #6a6d6d;
+    --text-color-3: #959797;
+    --text-color-4: #bfc0c0;
+}
+
+
+/* neither of these are used lol. but they would be pretty cool. */
+@keyframes neon-fade {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+}
+
+@keyframes neon-animation {
+    0% {
+      box-shadow: 0 0 10px cyan, 0 0 40px cyan, 0 0 80px cyan;
+    }
+    100% {
+      box-shadow: 0 0 30px cyan, 0 0 60px cyan, 0 0 100px cyan;
+    }
+}
