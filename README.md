@@ -6,3 +6,5 @@ Download the zip,
 Open VSCode,
 Run,
 Open Localhost,
+
+if this is failing, visit: https://codepen.io/was103/pen/WNWLQNx for a backup site.
