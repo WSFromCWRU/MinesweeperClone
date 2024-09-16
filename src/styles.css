@@ -315,7 +315,7 @@ li {
 }
 .board > [data-status="mine"]{
     background-color: #ff0000;
-    background-image: url('https://i.imgur.com/4hD32hA.png');
+    background-image: url('images/mine.png');
     background-size: cover; 
     background-position: center;
 }
@@ -323,7 +323,7 @@ li {
     background-color: none;
 }
 .board > [data-status="marked"]{
-    background-image: url('https://i.imgur.com/fp3moJi.png');
+    background-image: url('images/flag.png');
     background-size: cover; 
     background-position: center;
 }
